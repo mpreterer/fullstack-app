@@ -1,3 +1,4 @@
-export function qwe() { 
-    console.log('first')
- }
+export function qwe() {
+  console.log("first");
+  return "";
+}
