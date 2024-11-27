@@ -4,8 +4,8 @@ import webpack from "webpack";
 import { BuildOptions } from "./types/config";
 import { buildPlugins } from "./buildPlugins";
 import { buildResolvers } from "./buildResolvers";
-import { buildRules } from "./buildRules";
 import { buildDevServer } from "./buildDevServer";
+import { buildLoaders } from "./buildLoaders";
 
 export function buildWebpackConfig(
   options: BuildOptions
@@ -21,7 +21,7 @@ export function buildWebpackConfig(
       clean: true,
     },
     module: {
-      rules: buildRules(),
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
     plugins: buildPlugins(options),
