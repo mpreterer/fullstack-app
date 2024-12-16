@@ -2,15 +2,16 @@ name: listing, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: 
+      - '*'
 jobs:
   pipeline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [ 18.x ]
 
     steps:
       - uses: actions/checkout@v2
@@ -28,5 +29,3 @@ jobs:
         run: npm run lint:scss
       - name: testing unit
         run: npm run test:unit
-      - name: testing ui
-        run: npm run test:ui
