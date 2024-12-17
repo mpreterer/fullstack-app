@@ -8,6 +8,10 @@
 
 .collapsed {
   width: var(--sidebar-width-collapsed);
+
+  .switchers {
+    flex-direction: column;
+  }
 }
 
 .Switchers {
@@ -16,4 +20,34 @@
   justify-content: space-between;
   flex-direction: column;
   padding: 20px;
+}
+
+.collapseBtn {
+  font-size: 22px;
+  cursor: pointer;
+  position: absolute;
+  right: -30px;
+  bottom: 15px;
+  font-weight: bold;
+  border-radius: 0 6px 6px 0;
+}
+
+.items {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+  height: 30px;
+  width: 30px;
 }
