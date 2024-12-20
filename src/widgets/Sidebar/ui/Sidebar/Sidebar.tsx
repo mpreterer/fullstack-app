@@ -61,7 +61,7 @@ export const Sidebar = ({ className }: ISidebarProps) => {
             <div className={cls.icon}>
               <SVG_ABOUT_ICON />
             </div>
-            {!collapsed && <span>{t("О сайте")}</span>}
+            {!collapsed && <span>{t("О нас")}</span>}
           </AppLink>
         </div>
         <LangSwitcher short={collapsed} />
