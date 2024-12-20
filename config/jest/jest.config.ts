@@ -24,6 +24,9 @@ const config: Config = {
   setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
   rootDir: "../../",
   testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
+  globals: {
+    __IS_DEV__: true,
+  },
 };
 
 export default config;

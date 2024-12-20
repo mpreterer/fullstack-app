@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import { useCallback, useState } from "react";
 import { Modal } from "shared/ui/Modal/Modal";
+import { Counter } from "entities/Counter/ui/Counter";
 interface INavbarProps {
   className?: string;
 }
@@ -26,6 +27,7 @@ export const Navbar = ({ className }: INavbarProps) => {
           {t("Войти")}
         </Button>
       </div>
+      <Counter />
     </div>
   );
 };
